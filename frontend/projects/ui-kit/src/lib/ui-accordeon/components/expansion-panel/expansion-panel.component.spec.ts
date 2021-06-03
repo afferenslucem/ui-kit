@@ -69,8 +69,6 @@ describe('ExpansionPanelComponent', () => {
     });
 
     it('should trigger delegator opened', done => {
-      const delegator = TestBed.inject(OpenDelegatorService);
-
       delegator.open$.subscribe(panel => {
         expect(panel).toEqual(component);
         done();
