@@ -22,9 +22,9 @@
       "dom"
     ],
     "paths": {
-      "ui-kit": [
-        "dist/ui-kit/ui-kit",
-        "dist/ui-kit"
+      "bookolog-ui-kit": [
+        "dist/bookolog-ui-kit/bookolog-ui-kit",
+        "dist/bookolog-ui-kit"
       ]
     }
   },

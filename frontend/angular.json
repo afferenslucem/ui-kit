@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ui-kit": {
+    "bookolog-ui-kit": {
       "projectType": "library",
-      "root": "projects/ui-kit",
-      "sourceRoot": "projects/ui-kit/src",
+      "root": "projects/bookolog-ui-kit",
+      "sourceRoot": "projects/bookolog-ui-kit/src",
       "prefix": "ui",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ui-kit/tsconfig.lib.json",
-            "project": "projects/ui-kit/ng-package.json"
+            "tsConfig": "projects/bookolog-ui-kit/tsconfig.lib.json",
+            "project": "projects/bookolog-ui-kit/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ui-kit/tsconfig.lib.prod.json"
+              "tsConfig": "projects/bookolog-ui-kit/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ui-kit/src/test.ts",
-            "tsConfig": "projects/ui-kit/tsconfig.spec.json",
-            "karmaConfig": "projects/ui-kit/karma.conf.js"
+            "main": "projects/bookolog-ui-kit/src/test.ts",
+            "tsConfig": "projects/bookolog-ui-kit/tsconfig.spec.json",
+            "karmaConfig": "projects/bookolog-ui-kit/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ui-kit/tsconfig.lib.json",
-              "projects/ui-kit/tsconfig.spec.json"
+              "projects/bookolog-ui-kit/tsconfig.lib.json",
+              "projects/bookolog-ui-kit/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -46,5 +46,5 @@
   "cli": {
     "analytics": false
   },
-  "defaultProject": "ui-kit"
+  "defaultProject": "bookolog-ui-kit"
 }

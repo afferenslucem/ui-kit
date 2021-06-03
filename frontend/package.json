@@ -7,7 +7,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
-    "lint": "ng lint"
+    "lint": "ng lint --fix"
   },
   "dependencies": {
     "@angular/animations": "~11.0.0",
