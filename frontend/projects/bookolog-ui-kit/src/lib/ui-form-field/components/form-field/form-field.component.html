@@ -1,8 +1,8 @@
 <div [class.invalid]="invalid">
   <ng-content></ng-content>
 
-  <div (cdkObserveContent)="onContentChange()" *ngIf="invalidControl" class="error-wrapper">
-    <ng-content select="ui-error"></ng-content>
+  <div class="ui-error-wrapper">
+    <ng-content *ngIf="invalidControl" select="ui-error"></ng-content>
   </div>
 </div>
 

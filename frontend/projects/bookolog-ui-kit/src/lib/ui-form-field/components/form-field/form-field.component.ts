@@ -1,4 +1,4 @@
-import { Component, ContentChildren, OnInit, QueryList } from '@angular/core';
+import { Component, ContentChildren, ElementRef, OnInit, QueryList } from '@angular/core';
 import { FieldStateService } from '../../services/field-state.service';
 import { ErrorComponent } from '../error/error.component';
 
@@ -12,7 +12,7 @@ export class FormFieldComponent implements OnInit {
   @ContentChildren(ErrorComponent)
   public errors: QueryList<ErrorComponent>;
 
-  constructor(private fieldState: FieldStateService) {}
+  constructor(private fieldState: FieldStateService, private elRef: ElementRef<HTMLElement>) {}
 
   public get invalid(): boolean {
     return this.fieldState.invalid;
@@ -22,7 +22,15 @@ export class FormFieldComponent implements OnInit {
     return this.fieldState.invalidControl;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const observer = new MutationObserver(() => this.onContentChange());
+
+    const element = this.elRef.nativeElement.querySelector('.ui-error-wrapper');
+
+    observer.observe(element, {
+      childList: true,
+    });
+  }
 
   public onContentChange(): void {
     this.fieldState.hasErrors = this.errors.length > 0;
