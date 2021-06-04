@@ -19,10 +19,6 @@
   background-color: white;
 }
 
-[uiInput] {
-  @extend .form-control;
-}
-
 [uiSelect] {
   @extend .form-control;
 
@@ -34,6 +30,18 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+[uiInput] {
+  @extend .form-control;
+
+  &[list] {
+    @extend [uiSelect];
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 }
 
 ui-form-field {
