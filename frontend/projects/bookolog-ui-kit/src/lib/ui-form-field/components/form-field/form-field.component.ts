@@ -1,4 +1,4 @@
-import { Component, ContentChildren, ElementRef, OnInit, QueryList } from '@angular/core';
+import { Component, ContentChildren, ElementRef, Input, OnInit, QueryList } from '@angular/core';
 import { FieldStateService } from '../../services/field-state.service';
 import { ErrorComponent } from '../error/error.component';
 

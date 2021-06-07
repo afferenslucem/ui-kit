@@ -1,11 +1,11 @@
 @import "../variables";
 
 .ui-form-field-set {
-  > ui-form-field:not(:first-child) {
+  ui-form-field:not(:first-child) {
     margin-top: $ind-5;
   }
 
-  > ui-form-field-set:not(:first-child) {
+  ui-form-field-set:not(:first-child) {
     margin-top: $ind-5;
   }
 }
@@ -47,7 +47,15 @@ ui-form-field-set {
 }
 
 form {
-  ui-form-header + * {
+  > ui-form-header + * {
+    margin-top: 0 !important;
+  }
+
+  ui-form-field-set:first-child {
+    margin-top: 0 !important;
+  }
+
+  ui-form-field:first-child {
     margin-top: 0 !important;
   }
 
