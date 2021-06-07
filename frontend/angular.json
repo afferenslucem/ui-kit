@@ -5,6 +5,14 @@
   "projects": {
     "bookolog-ui-kit": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "projects/bookolog-ui-kit",
       "sourceRoot": "projects/bookolog-ui-kit/src",
       "prefix": "ui",

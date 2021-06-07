@@ -3,6 +3,8 @@ export * from './lib/ui-form-field/directives/select.directive';
 export * from './lib/ui-form-field/directives/list.directive';
 export * from './lib/ui-form-field/components/label/label.component';
 export * from './lib/ui-form-field/components/form-field/form-field.component';
+export * from './lib/ui-form-field/components/form-header/form-header.component';
+export * from './lib/ui-form-field/components/form-field-set/form-field-set.component';
 export * from './lib/ui-form-field/components/error/error.component';
 export * from './lib/ui-form-field/ui-form-field.module';
 

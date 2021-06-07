@@ -48,12 +48,12 @@ html {
   color: $font-color;
 }
 
-h1, h2, h3, h4, h5, h6, ui-label, ui-toolbar, .ui-form-header, ui-modal-header {
+h1, h2, h3, h4, h5, h6, ui-label, ui-toolbar, ui-form-header, ui-modal-header {
   font-family: 'NotoSans';
 }
 
 
-.ui-form-header, ui-modal-header {
+ui-form-header, ui-modal-header {
   font-size: 1.1rem;
   font-weight: 700;
 }

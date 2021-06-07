@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "components/forms";
 
 .form-control {
   display: block;
@@ -41,51 +42,6 @@
 
   &::-webkit-calendar-picker-indicator {
     display: none;
-  }
-}
-
-ui-form-field {
-  .invalid {
-    [uiInput] {
-      border: 1px solid $border-error-color;
-
-      &:focus {
-        @include focusBorder;
-      }
-    }
-  }
-}
-
-form.ui-form {
-  > :not(:first-child):not(.ui-form-header):not(ui-error) {
-    margin-top: $ind-5;
-  }
-
-  button[type=submit] {
-    margin-top: $ind-3;
-  }
-}
-
-ui-label {
-  margin-bottom: $ind-1;
-}
-
-ui-error {
-  margin-top: $ind-2;
-}
-
-.field-group {
-  width: 100%;
-
-  &.horizontal {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    ui-form-field {
-      margin-top: 0;
-      flex: 1 1 auto;
-    }
   }
 }
 
