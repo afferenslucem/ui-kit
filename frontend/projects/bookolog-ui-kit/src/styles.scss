@@ -8,11 +8,15 @@
   box-sizing: border-box;
 }
 
-.p-h-4 {
+.ph-4 {
   padding-left: $ind-4;
   padding-right: $ind-4;
 }
 
-.p-r-4 {
+.pr-4 {
   padding-right: $ind-4;
+}
+
+.mr-4 {
+  margin-right: $ind-4;
 }

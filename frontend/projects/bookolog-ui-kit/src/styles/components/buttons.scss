@@ -1,0 +1,90 @@
+@import "../variables";
+
+[uiButton] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: $default-radius;
+
+  transition: color ease-in-out 0.15s,
+  border-color ease-in-out 0.15s,
+  background-color ease-in-out 0.15s,
+  box-shadow ease-in-out 0.15s;
+  padding: $ind-2 $ind-3;
+
+  color: white;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.65;
+    pointer-events: none;
+  }
+
+  &.btn-primary {
+    color: white;
+    background-color: $primary-button-color;
+    border: 1px solid transparent;
+
+    &:focus {
+      border-color: $primary-button-focused-color;
+      background-color: $primary-button-focused-color;
+      box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+    }
+  }
+
+  &.btn-success {
+    background-color: $success-button-color;
+    border: 1px solid transparent;
+
+    &:focus {
+      border-color: $success-button-focused-color;
+      background-color: $success-button-focused-color;
+      box-shadow: 0 0 0 0.25rem rgb(60 153 110 / 50%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $secondary-button-color;
+    border: 1px solid transparent;
+
+    &:focus {
+      border-color: $secondary-button-focused-color;
+      background-color: $secondary-button-focused-color;
+      box-shadow: 0 0 0 0.25rem rgb(130 138 145 / 50%);
+    }
+  }
+
+  &.btn-danger {
+    background-color: $danger-button-color;
+    border: 1px solid transparent;
+
+    &:focus {
+      border-color: $danger-button-focused-color;
+      background-color: $danger-button-focused-color;
+      box-shadow: 0 0 0 0.25rem rgb(225 83 97 / 50%);
+    }
+  }
+
+  &.btn-warning {
+    background-color: $warning-button-color;
+    border: 1px solid transparent;
+    color: black;
+
+    &:focus {
+      border-color: $warning-button-focused-color;
+      background-color: $warning-button-focused-color;
+      box-shadow: 0 0 0 0.25rem rgb(217 164 6 / 50%);
+    }
+  }
+
+  &.btn-flat {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+[uiIconButton] {
+  @extend [uiButton];
+  padding: $ind-2;
+}
