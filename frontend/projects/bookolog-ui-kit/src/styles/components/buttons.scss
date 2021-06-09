@@ -87,4 +87,6 @@
 [uiIconButton] {
   @extend [uiButton];
   padding: $ind-2;
+  height: 28px;
+  width: 28px;
 }
