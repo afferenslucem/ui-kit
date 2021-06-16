@@ -25,11 +25,11 @@ export * from './lib/ui-progress-bar/components/progress-bar/progress-bar.compon
 export * from './lib/ui-divider/ui-divider.module';
 export * from './lib/ui-divider/components/divider/divider.component';
 
-export * from './lib/ui-accordeon/ui-accordion.module';
-export * from './lib/ui-accordeon/components/accordion/accordion.component';
-export * from './lib/ui-accordeon/components/expansion-panel/expansion-panel.component';
-export * from './lib/ui-accordeon/components/expansion-panel-body/expansion-panel-body.component';
-export * from './lib/ui-accordeon/components/expansion-panel-header/expansion-panel-header.component';
+export * from './lib/ui-accordion/ui-accordion.module';
+export * from './lib/ui-accordion/components/accordion/accordion.component';
+export * from './lib/ui-accordion/components/expansion-panel/expansion-panel.component';
+export * from './lib/ui-accordion/components/expansion-panel-body/expansion-panel-body.component';
+export * from './lib/ui-accordion/components/expansion-panel-header/expansion-panel-header.component';
 
 export * from './lib/ui-modal/ui-modal.module';
 export * from './lib/ui-modal/components/modal/modal.component';
@@ -43,3 +43,6 @@ export * from './lib/common/destroy.service';
 
 export * from './lib/ui-spinner/ui-spinner.module';
 export * from './lib/ui-spinner/components/spinner/spinner.component';
+
+export * from './lib/ui-chips/components/chip/chip.component';
+export * from './lib/ui-chips/ui-chips.module';

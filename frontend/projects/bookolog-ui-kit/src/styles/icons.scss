@@ -57,6 +57,27 @@
   }
 }
 
+.ui-times {
+  @extend %fa-icon;
+  @extend .fas;
+  @extend .icon;
+
+  &:before {
+    content: fa-content($fa-var-times);
+  }
+}
+
+
+.ui-times-circle {
+  @extend %fa-icon;
+  @extend .far;
+  @extend .icon;
+
+  &:before {
+    content: fa-content($fa-var-times-circle);
+  }
+}
+
 .ui-sync {
   @extend %fa-icon;
   @extend .fas;

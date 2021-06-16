@@ -1,11 +1,12 @@
 import { Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Color } from '../../common/types/color';
 
 @Directive({
   selector: '[uiButton]',
 })
 export class ButtonDirective implements OnChanges {
   @Input()
-  public color: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | string = 'primary';
+  public color: Color | string = 'primary';
 
   @Input()
   public type: 'basic' | 'flat' | string = 'basic';

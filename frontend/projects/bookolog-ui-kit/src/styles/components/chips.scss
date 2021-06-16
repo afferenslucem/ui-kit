@@ -1,0 +1,23 @@
+@import "abstract";
+@import "../variables";
+
+ui-chip {
+  @extend .colored;
+  @extend .button-like;
+
+  background-color: $warning-button-color;
+  color: black;
+
+  height: 2rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+
+  .ui-times-circle {
+    margin-left: 0.25rem;
+    font-size: 18px;
+  }
+}
+
+ui-chip + ui-chip {
+  margin-left: 0.25rem;
+}
