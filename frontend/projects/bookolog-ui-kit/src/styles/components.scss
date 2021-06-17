@@ -15,7 +15,7 @@
 
   border: 1px solid $border-color;
 
-  &:focus {
+  &:focus, &:focus-within {
     @include focusBorder;
   }
 
@@ -227,4 +227,30 @@ ui-modal {
   border-radius: 50%;
   -webkit-animation: .75s linear infinite spinner-border;
   animation: .75s linear infinite spinner-border;
+}
+
+
+ui-chip-list {
+  @extend [uiInput];
+
+  padding: $ind-2;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  ui-chip {
+    flex: 0 0 auto;
+    margin: $ind-1;
+  }
+
+  input {
+    width: 150px;
+    flex: 1 0 auto;
+    padding: $ind-2;
+
+    border: none;
+  }
 }

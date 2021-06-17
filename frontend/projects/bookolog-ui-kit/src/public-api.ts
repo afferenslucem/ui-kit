@@ -45,4 +45,8 @@ export * from './lib/ui-spinner/ui-spinner.module';
 export * from './lib/ui-spinner/components/spinner/spinner.component';
 
 export * from './lib/ui-chips/components/chip/chip.component';
+export * from './lib/ui-chips/components/chip-list/chip-list.component';
+export * from './lib/ui-chips/directives/chip-add-on-blur.directive';
+export * from './lib/ui-chips/directives/chip-input-finished.directive';
+export * from './lib/ui-chips/directives/chip-separator-keys.directive';
 export * from './lib/ui-chips/ui-chips.module';
