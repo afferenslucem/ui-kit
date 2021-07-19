@@ -21,4 +21,18 @@ describe('ProgressBarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('value accessor', () => {
+    it('should return value', () => {
+      component.value = 80;
+
+      expect(component.value).toEqual(80);
+    });
+
+    it('should return 100', () => {
+      component.value = 800;
+
+      expect(component.value).toEqual(100);
+    });
+  });
 });
