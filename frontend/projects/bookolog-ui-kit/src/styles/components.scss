@@ -99,10 +99,11 @@ ui-side-menu-host {
 
     &.left {
       height: 100%;
-      left: -100%;
+
+      transform: translateX(-103%);
 
       &.opened {
-        left: 0;
+        transform: translateX(0%);
       }
     }
   }
