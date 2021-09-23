@@ -38,6 +38,8 @@ export * from './lib/ui-modal/components/modal-header/modal-header.component';
 export * from './lib/ui-modal/components/modal-bottom/modal-bottom.component';
 export * from './lib/ui-modal/services/ui-modal.service';
 export * from './lib/ui-modal/models/modal-ref';
+export * from './lib/ui-modal/models/modal-data';
+export * from './lib/ui-modal/injection-tokens';
 
 export * from './lib/common/destroy.service';
 

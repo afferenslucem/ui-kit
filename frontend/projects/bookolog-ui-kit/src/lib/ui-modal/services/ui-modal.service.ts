@@ -2,6 +2,8 @@ import { ComponentFactoryResolver, ComponentRef, Injectable, Injector, Type, Vie
 import { ModalComponent } from '../components/modal/modal.component';
 import { ModalRef } from '../models/modal-ref';
 import { ModalConfig } from '../models/modal-config';
+import { ModalData } from '../models/modal-data';
+import { DIALOG_DATA } from '../injection-tokens';
 
 @Injectable({
   providedIn: 'root',
@@ -15,9 +17,9 @@ export class UiModalService {
     this.viewContainerRef = viewContainerRef;
   }
 
-  public open<T>(type: Type<T>, config?: ModalConfig): ModalRef<T> {
+  public open<T>(type: Type<T>, data?: any, config?: ModalConfig): ModalRef<T> {
     const ref = new ModalRef<T>();
-    const injector = this.createInjector(ref, config);
+    const injector = this.createInjector(ref, data, config);
 
     ref.componentRef = this.createModal(type, injector);
     const modalHost = this.createPlaceholder(injector);
@@ -53,10 +55,12 @@ export class UiModalService {
     host.instance.container.insert(dialog.hostView);
   }
 
-  private createInjector<T>(ref: ModalRef<T>, config?: ModalConfig): Injector {
-    const dialogInjector = Injector.create({
+  private createInjector<T>(ref: ModalRef<T>, data?: ModalData, config?: ModalConfig): Injector {
+    let dialogInjector: Injector;
+    dialogInjector = Injector.create({
       providers: [
         { provide: ModalRef, useValue: ref },
+        { provide: DIALOG_DATA, useValue: data },
         { provide: ModalConfig, useValue: config || {} },
       ],
       parent: this.viewContainerRef.injector,

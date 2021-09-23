@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, Inject, ViewChild, ViewContainerRef } from '@angular/core';
 import { DestroyService } from '../../../common/destroy.service';
 import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ModalRef } from '../../models/modal-ref';
 import { ModalConfig } from '../../models/modal-config';
+import { DIALOG_DATA } from '../../injection-tokens';
 
 @Component({
   selector: 'ui-modal',
@@ -15,7 +16,12 @@ export class ModalComponent implements AfterViewInit {
   @ViewChild('placeholder', { read: ViewContainerRef }) container: ViewContainerRef;
   private _viewInited = new Subject<void>();
 
-  constructor(private destroy$: DestroyService, private modalRef: ModalRef, public config: ModalConfig) {
+  constructor(
+    private destroy$: DestroyService,
+    private modalRef: ModalRef,
+    public config: ModalConfig,
+    @Inject(DIALOG_DATA) public data: any,
+  ) {
     this.viewInited = this._viewInited.pipe(takeUntil(destroy$));
   }
 
