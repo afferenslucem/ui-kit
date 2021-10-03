@@ -1,24 +1,24 @@
 @import "../variables";
 
 .colored {
-  &, [color=primary] {
+  &, [data-bui-color=primary] {
     color: white;
     background-color: $primary-button-color;
   }
 
-  &[color=success] {
+  &[data-bui-color=success] {
     background-color: $success-button-color;
   }
 
-  &[color=secondary] {
+  &[data-bui-color=secondary] {
     background-color: $secondary-button-color;
   }
 
-  &[color=danger] {
+  &[data-bui-color=danger] {
     background-color: $danger-button-color;
   }
 
-  &[color=warning] {
+  &[data-bui-color=warning] {
     color: black;
     background-color: $warning-button-color;
   }

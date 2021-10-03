@@ -9,8 +9,8 @@ export * from './lib/ui-form-field/components/error/error.component';
 export * from './lib/ui-form-field/ui-form-field.module';
 
 export * from './lib/ui-button/ui-button.module';
-export * from './lib/ui-button/directives/button.directive';
-export * from './lib/ui-button/directives/icon-button.directive';
+export * from './lib/ui-button/components/button/button.component';
+export * from './lib/ui-button/components/icon-button/icon-button.component';
 
 export * from './lib/ui-toolbar/ui-toolbar.module';
 export * from './lib/ui-toolbar/components/toolbar/toolbar.component';

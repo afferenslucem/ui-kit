@@ -1,4 +1,14 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostBinding,
+  Input,
+  OnInit,
+  Output,
+  ViewEncapsulation
+} from '@angular/core';
 import { Color } from '../../../common/types/color';
 import { ChipCrossClickEvent } from '../../models/chip-cross-click-event';
 
@@ -6,10 +16,13 @@ import { ChipCrossClickEvent } from '../../models/chip-cross-click-event';
   selector: 'ui-chip',
   templateUrl: './chip.component.html',
   styleUrls: ['./chip.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
 })
 export class ChipComponent implements OnInit {
   @Input()
-  public color: Color | string;
+  @HostBinding('attr.data-bui-color')
+  public color: Color | string = 'primary';
 
   @Input()
   public value: any;
