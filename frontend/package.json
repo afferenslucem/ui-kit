@@ -9,6 +9,14 @@
     "test:prod": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "lint": "ng lint --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html, js, ts, scss}": "npm run lint"
+  },
   "dependencies": {
     "@angular/animations": "~11.0.0",
     "@angular/common": "~11.0.0",
@@ -19,6 +27,8 @@
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
     "essents": "^1.4.7",
+    "husky": "^4.3.0",
+    "lint-staged": "^11.2.2",
     "rxjs": "~6.6.0",
     "sha1": "^1.1.1",
     "tslib": "^2.0.0",
